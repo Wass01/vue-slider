@@ -11,16 +11,29 @@
 <body>
   <div id="root">
     <div class="slider-container">
-      <div class="prev" @click="prev">
-        <i class="fas fa-chevron-left"></i>
+      <div class="slider">
+        <div class="prev-next" @click="prev">
+          <i class="fas fa-chevron-left"></i>
+        </div>
+
+        <div class="slider-img">
+          <img :src="arrayImage[i]" alt="scroll">
+        </div>
+
+        <div class="prev-next" @click="next">
+          <i class="fas fa-chevron-right"></i>
+        </div>
       </div>
 
-      <div class="slider-img">
-        <img :src="arrayImage[i]" alt="scroll">
-      </div>
+      <div class="nav">
+        <div class="circle">
+          <i v-for="scroll in arrayImage.length"
+          :class="(scroll - 1 == i) ? 'active' : ''"
+          @click="navcircle(scroll - 1)"
+          class="fas fa-circle">
 
-      <div class="next" @click="next">
-        <i class="fas fa-chevron-right"></i>
+          </i>
+        </div>
       </div>
     </div>
   </div>

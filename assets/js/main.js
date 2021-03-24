@@ -25,6 +25,10 @@ var app = new Vue(
         } else {
           this.i = this.arrayImage.length - 1;
         }
+      },
+
+      navcircle: function (i) {
+        this.i = i;
       }
     }
   }
