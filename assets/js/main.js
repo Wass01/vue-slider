@@ -27,9 +27,9 @@ var app = new Vue(
         }
       },
 
-      navcircle: function (i) {
+      navcircle: function(i) {
         this.i = i;
-      }
-    }
+      },
+  }
   }
 );
